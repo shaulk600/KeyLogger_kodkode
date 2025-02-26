@@ -1,0 +1,10 @@
+{
+    "machines": [
+        {
+            "name": "machine1"
+        },
+        {
+            "name": "machine2"
+        }
+    ]
+}
