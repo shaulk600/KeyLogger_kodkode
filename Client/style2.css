@@ -1,0 +1,87 @@
+/* עיצוב כללי */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Anonymous_Hacker.png') no-repeat center center fixed; /* תמונת הרקע */
+    background-size: cover; /* שהתמונה תכסה את כל המסך */
+    text-align: center;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* עיצוב הקונטיינר המרכזי */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* רקע שקוף-לבן עם טשטוש */
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* אפקט זכוכית מטושטשת */
+}
+
+/* עיצוב הכותרת */
+h1 {
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* עיצוב הטבלה */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* עיצוב הכותרות של הטבלה */
+th {
+    background-color: rgba(0, 123, 255, 0.7);
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+}
+
+/* עיצוב התאים בטבלה */
+td {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* עיצוב שדה הקלט */
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* עיצוב הכפתור */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
