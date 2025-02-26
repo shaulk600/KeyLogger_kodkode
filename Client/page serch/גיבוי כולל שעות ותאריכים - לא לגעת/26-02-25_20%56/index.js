@@ -153,35 +153,3 @@ window.addEventListener('click', function(event) {
         
     }
 });
-
-// הרחבה :
-// מצב לילה
-
-// משתנים
-
-// משתנה הכפתור
-const toggleButton = document.getElementById('toggleDarkMode');
-// משתנה עיצוב גוף הדף
-const body = document.body;
-
-// בעת טעינת הדף? בדיקה
-// בדיקת מצב כהה קודם מה-Local Storage
-if (localStorage.getItem('dark-mode') === 'enabled') {
-    // עידכון עיצוב body
-    body.classList.add('dark-mode');
-    // עידכון כפתור
-    toggleButton.textContent = '☀️ מצב בהיר';
-}
-
-// הוספת אירוע לחיצה
-toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-        toggleButton.textContent = '☀️ מצב בהיר';
-    } else {
-        localStorage.setItem('dark-mode', 'disabled');
-        toggleButton.textContent = '🌙 מצב כהה';
-    }
-});
