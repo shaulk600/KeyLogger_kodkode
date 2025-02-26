@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף ראשי</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ברוך הבא!</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>שעה</th>
+                    <th>שם מחשב</th>
+                    <th>הוסף מידע</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="time-cell"></td>
+                    <td id="machine-cell"></td>
+                    <td>
+                        <input type="text" id="extra-info" placeholder="הזן מידע נוסף">
+                        <button onclick="saveExtraInfo()">שמור</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // קבלת הנתונים מתוך localStorage
+        const machine = localStorage.getItem('machine') || "לא הוזן";
+        const dateTime = localStorage.getItem('date_time') || "לא הוזן";
+
+        // הצגת הנתונים בטבלה
+        document.getElementById('time-cell').innerText = dateTime;
+        document.getElementById('machine-cell').innerText = machine;
+
+        function saveExtraInfo() {
+            const extraInfo = document.getElementById('extra-info').value;
+            if (extraInfo) {
+                alert(`המידע נשמר: ${extraInfo}`);
+            } else {
+                alert("אנא הכנס מידע לפני שמירה.");
+            }
+        }
+    </script>
+</body>
+</html>
