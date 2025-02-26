@@ -1,0 +1,132 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+/* Body background with image of code or hacker theme */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Anonymous_Hacker.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Container for the login form */
+.login-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #00ff00;
+}
+
+/* Header styling inside login container */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #00ff00;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.login-header p {
+    color: #888888;
+    font-size: 1em;
+    font-family: 'Courier New', monospace;
+}
+
+/* Form input fields and labels */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00ff00;
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: #333;
+    color: #00ff00;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+/* Focus effect for input fields */
+.form-group input:focus {
+    border-color: #8f94fb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(143, 148, 251, 0.4);
+}
+
+/* Button styling */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00ff00;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(143, 148, 251, 0.4);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff0033;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+}
+
+/* Animation for fading in the login container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-container {
+    animation: fadeIn 0.5s ease-out;
+}
